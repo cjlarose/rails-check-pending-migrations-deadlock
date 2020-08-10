@@ -17,3 +17,7 @@ ActiveSupport.on_load(:active_record) do
     DbConnectionPoolStatsReporter.report conn.pool
   end
 end
+
+Thread.new do
+  binding.remote_pry
+end
